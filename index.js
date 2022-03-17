@@ -13,7 +13,6 @@ function sleep(ms, txt) {
 function resolve1(txt) {
   outDiv.innerHTML += txt;
 }
-
 function resolve2(txt) {
   console.log(txt);
 }
