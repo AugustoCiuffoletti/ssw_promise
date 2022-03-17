@@ -6,4 +6,6 @@ La prima variazione consiste nel dichiarare una funzione (resolve1) che verrà p
 
 La seconda variazione consiste nel non dichiarare esplicitamente la funzione resolve, ma di inserirla come funzione anonima in notazione arrow nel "then".
 
-La terza variazione consiste nel definire in modo anonimo anche la promise stessa. 
+La terza variazione consiste nel definire in modo anonimo anche la promise stessa.
+
+Osservate la diversa sinteticità del codice: 7 righe per la prima variazione, 5 per la seconda, due per la terza.
