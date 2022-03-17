@@ -5,14 +5,18 @@ const outDiv = document.getElementById("output");
 appDiv.innerHTML = `<h1>Un esempio di <i>promise<i></h1>`;
 
 function sleep(ms, txt) {
-  return new Promise( esce => {
-    setTimeout(() => esce(txt), ms);
+  return new Promise( resolve => {
+    setTimeout(() => resolve(txt), ms);
   });
 }
-async function prova() {
-  outDiv.innerHTML += await sleep(3000, "Fine primo step <br>");
-  outDiv.innerHTML += await sleep(5000, "Fine secondo step <br>");
+
+function resolve1(txt) {
+  outDiv.innerHTML += txt;
 }
 
-outDiv.innerHTML += "Inizio <br>";
-prova().then(() => (outDiv.innerHTML += "Finito"));
+function resolve2(txt) {
+  console.log(txt);
+}
+
+sleep(3000, "Fine attesa <br>").then((txt) => resolve1(txt));
+sleep(3000, "Fine attesa <br>").then((txt) => resolve2(txt));
