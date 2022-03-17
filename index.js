@@ -13,8 +13,7 @@ function resolve1() {
 }
 sleep(3000).then(resolve1);
 // Seconda variazione: funzione resolve anonima (definita arrow)
-sleep(3000)
-  .then(() => console.log("Resolve anonima"));
+sleep(3000).then(() => console.log("Resolve anonima"));
 // Terza variazione: promise e resolve entrambe anonime
 new Promise(resolve => setTimeout(() => resolve(), 3000))
   .then(() => console.log("Promise anonima")); 
